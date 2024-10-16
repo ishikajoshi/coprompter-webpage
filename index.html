@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoPrompter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CoPrompter 🚀</h1>
+      <nav>
+        <ul>
+          <li><a href="#introduction">Arxiv Version coming soon</a></li>
+          <!-- <li><a href="#abstract">Abstract</a></li>
+          <li><a href="#demo">Demo Video</a></li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="introduction">
+        <h2>CoPrompter🚀 for Prompt Engineering</h2>
+        <p>
+          Ensuring large language models' (LLMs) responses
+          <strong>align</strong> with prompt instructions is crucial for
+          application development. Based on our formative study with industry
+          professionals, the alignment requires
+          <em>heavy human involvement and tedious trial-and-error</em>
+          especially when there are many instructions in the prompt. To address
+          these challenges, we introduce
+          <span style="color: #6f60ed"><strong>CoPrompter</strong></span
+          >, a framework that identifies <strong>misalignment</strong> based on
+          assessing multiple LLM responses with criteria. It proposes a method
+          to generate <em>evaluation criteria questions</em> derived directly
+          from prompt requirements and an interface to turn these questions into
+          a user-editable checklist. ✨ Our user study with industry prompt
+          engineers shows that
+          <span style="color: #6f60ed"><strong>CoPrompter</strong></span>
+          improves the ability to identify and refine instruction alignment with
+          prompt requirements over traditional methods, helps them understand
+          where and how frequently models fail to follow user's prompt
+          requirements, and aids in clarifying their own requirements, giving
+          them greater control over the response evaluation process. 🔍 We also
+          present the design lessons to underscore our system's potential to
+          streamline the prompt engineering process. 🚀
+        </p>
+      </section>
+
+      <section id="workflow">
+        <h2>System Architecture</h2>
+        <img src="images/system_arch.jpg" width="800px" />
+        <!-- <p> -->
+        <p>
+          The <strong>CoPrompter system workflow</strong> begins with (1) the
+          <strong>Evaluation Criteria Generation Module</strong>, where user
+          prompt requirements (guidelines) are broken down into atomic
+          instructions. These instructions are then formulated as
+          <strong>criteria questions (CQs)</strong> with ground truth labels and
+          metadata tags (e.g., <strong>main task</strong>,
+          <strong>subtask</strong>, or <strong>format-related</strong>). ✨
+        </p>
+
+        <p>
+          Users can adjust these criteria in (2) the
+          <strong>Update Criteria Module</strong> by <strong>editing</strong>,
+          <strong>deleting</strong>, or <strong>adding new CQs</strong>.
+        </p>
+
+        <p>
+          Next, in (3) the <strong>Prompt Response Generation Module</strong>,
+          users input their prompt, select an <strong>LLM</strong>, and generate
+          responses. 📝 The responses are evaluated against the defined
+          criteria, with results displayed in (4) the
+          <strong>Alignment Report Card Module</strong>.
+        </p>
+
+        <p>
+          This report shows aligned and misaligned requirements, allowing users
+          to explore misalignments in detail. 📊 Based on the feedback, users
+          can <strong>refine</strong> their prompt or criteria, iterating as
+          needed to improve alignment. 🔄
+        </p>
+
+        <!-- </p> -->
+      </section>
+
+      <section id="demo">
+        <h2>Demo Video</h2>
+        <div class="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="images/coprompter-demo-longver.mp4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Stay Tuned for more Updates on CoPrompter🚀</p>
+    </footer>
+  </body>
+</html>
